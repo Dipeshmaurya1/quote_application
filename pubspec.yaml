@@ -87,6 +87,14 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  #
+  fonts:
+    - family: NSD_Italic
+      fonts:
+        - asset: Assets/Fonts/NSD_Normal.ttf
+          style: normal
+    - family: RC_Normal
+      fonts:
+        - asset: Assets/Fonts/RC_Normal.ttf
+          style: normal
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
