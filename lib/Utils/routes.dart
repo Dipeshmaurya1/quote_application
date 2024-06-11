@@ -1,7 +1,9 @@
 
 
+
 import 'package:flutter/material.dart';
 import 'package:quote_application/Component/Screens/EntryScreen/entry_screen.dart';
+import 'package:quote_application/Component/Screens/QuoteScreen/quote_screen.dart';
 // import 'package:quote_application/Component/Screens/HomeScreen/category_screen.dart';
 import 'package:quote_application/Component/Screens/Splash_Screen/splash_screen.dart';
 
@@ -12,5 +14,6 @@ class AppRoutes{
     '/': (context) => SplashScreen(),
     '/main': (context) => CategoryScreen(),
     '/entry': (context) => EntryScreen(),
+    '/quote': (context) => QuoteScreen(),
   };
 }

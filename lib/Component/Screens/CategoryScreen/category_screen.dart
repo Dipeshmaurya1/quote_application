@@ -63,35 +63,40 @@ class _CategoryScreenState extends State<CategoryScreen> {
               itemCount: Quote_Type_Categories.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2, childAspectRatio: 1),
-              itemBuilder: (context, index) => Container(
-                margin: EdgeInsets.all(5),
-                // padding: EdgeInsets.all(15),
-                height: h * 0.10,
-                width: w * 0.5,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  color: HomeScreenColorlist[
-                      index % HomeScreenColorlist.length],
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(
-                      Quote_Type_Categories[index]['home_Icon'],
-                      size: 40,
-                      color: Quote_Type_Categories[index]['home_color'],
-                    ),
-                    SizedBox(
-                      height: h * 0.02,
-                    ),
-                    Text(
-                      Quote_Type_Categories[index]['home_Text'],
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 25,
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushNamed('/quote');
+                },
+                child: Container(
+                  margin: EdgeInsets.all(5),
+                  // padding: EdgeInsets.all(15),
+                  height: h * 0.10,
+                  width: w * 0.5,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: HomeScreenColorlist[
+                        index % HomeScreenColorlist.length],
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Quote_Type_Categories[index]['home_Icon'],
+                        size: 40,
+                        color: Quote_Type_Categories[index]['home_color'],
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: h * 0.02,
+                      ),
+                      Text(
+                        Quote_Type_Categories[index]['home_Text'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 25,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             )
@@ -99,7 +104,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               itemCount: Quote_Type_Categories.length,
               itemBuilder: (context, index) => GestureDetector(
                 onTap: (){
-
+                  Navigator.of(context).pushNamed('/quote');
                 },
                 child: Card(
                   child: Container(
